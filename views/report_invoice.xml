@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="is_report_invoice_document" name="is_report_invoice_document" inherit_id="account.report_invoice_document">
+        <span t-field="line.name" position="replace">
+            <span t-field="line.name" t-options="{'widget': 'text'}"/>
+            <t t-if="line.is_cle_licence">
+                <div><b>Votre clef de licence : <span t-field="line.is_cle_licence"/></b></div>
+            </t>
+        </span>
+    </template>
+</odoo>
