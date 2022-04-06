@@ -32,4 +32,5 @@ class AccountMoveLine(models.Model):
                     cle+=y
                     sens=-sens
                 obj.is_cle_licence = cle
+        return res
 
